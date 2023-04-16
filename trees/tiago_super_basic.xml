@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<root main_tree_to_execute="BehaviorTree">
+    <!-- ////////// -->
+    <BehaviorTree ID="BehaviorTree">
+        <Sequence>
+            <Action ID="PlayMotion" motion_name="wave"/>
+        </Sequence>
+    </BehaviorTree>
+    <!-- ////////// -->
+    <TreeNodesModel>
+        <Action ID="PlayMotion" description="Play a predefined Tiago motion">
+            <input_port default="wave" name="motion_name">Name of the predefined motion that Tiago will perform</input_port>
+        </Action>
+    </TreeNodesModel>
+    <!-- ////////// -->
+</root>

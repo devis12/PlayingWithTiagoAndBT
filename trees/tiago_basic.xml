@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<root main_tree_to_execute="BehaviorTree">
+    <!-- ////////// -->
+    <BehaviorTree ID="BehaviorTree">
+        <Parallel failure_threshold="1" success_threshold="2">
+            <Action ID="MoveCircle" rounds="2" velocity="4"/>
+            <Repeat num_cycles="3">
+                <Action ID="PlayMotion" motion_name="wave"/>
+            </Repeat>
+        </Parallel>
+    </BehaviorTree>
+    <!-- ////////// -->
+    <TreeNodesModel>
+        <Action ID="MoveCircle" description="Tiago runs around in a circle-shaped path">
+            <input_port default="1" name="rounds">Number of circle you want Tiago to do</input_port>
+            <input_port default="2" name="velocity">Linear (x) and angular (z) velocity applied to Tiago while turning around</input_port>
+        </Action>
+        <Action ID="PlayMotion" description="Play a predefined Tiago motion">
+            <input_port default="wave" name="motion_name">Name of the predefined motion that Tiago will perform</input_port>
+        </Action>
+    </TreeNodesModel>
+    <!-- ////////// -->
+</root>
